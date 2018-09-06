@@ -2,12 +2,11 @@
 
 class Menu {
     render() {
-        return(
-            <div>
-                <a>О нас</a>
-                <a>Товары</a>
-            </div>
-        )
-        
+        const root = document.getElementById('root');
+        root.insertAdjacentHTML('afterBegin', '<a href="#items">Товары</a> <a href="#about">О нас</a>')
     }
 }
+
+const menu = new Menu();
+
+export default menu;

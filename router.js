@@ -18,20 +18,22 @@ class Router {
         if(newUrl !== oldUrl) {
             if(this.historyRoutes.length === 10) {
                 this.historyRoutes.shift();
-                this.historyRoutes.push(path);
+                this.historyRoutes.push(newUrl);
                 this.render(newUrl)
             } else {
                 this.historyRoutes.push(newUrl);
                 this.render(newUrl);
             }
         } else if(newUrl === oldUrl) {
-            return
+            return;
         }
     }
 
     render = (url) => {
-        let urlReg = url.match(/(?<=#).+/);
-        console.log(this.historyRoutes);
+        const root = document.getElementById('root');
+        console.log(this.historyRoutes); // Через консоль показываем историю передвижений
+        root.innerHTML = ''; //При открытии новой страницы сбрасываем содержимое root элемента
+        let urlReg = url.match(/(?<=#).+/); //Для удобства из url через регулярку берем подстроку после #
         for(let key in this.routes) {
             if(key === urlReg[0]) {
                 this.routes[key].render();

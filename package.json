@@ -1,0 +1,32 @@
+{
+  "name": "testvigrom",
+  "version": "1.0.0",
+  "description": "test task from Vigrom",
+  "main": "router.js",
+  "scripts": {
+    "start": "webpack-dev-server --config ./webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pavlutkin/TestVigrom.git"
+  },
+  "author": "Pavlutkin Alexander",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pavlutkin/TestVigrom/issues"
+  },
+  "homepage": "https://github.com/Pavlutkin/TestVigrom#readme",
+  "dependencies": {
+    "webpack": "^4.17.2",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.7"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "babel-loader": "^8.0.2",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "html-webpack-plugin": "^3.2.0"
+  }
+}
